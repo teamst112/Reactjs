@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import Car from './Car';
+import CarState from './CarState';
+import Event from './Event';
+import Form from './Form';
+
 
 function App() {
+  let mycar={
+    name:"Lamboghini",
+    color:"purple"
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Welcom Reactjs
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Car yourcolor={mycar}/>
+      <CarState name="Suzuki"/>
+      <Event/>
+      <Form/>
     </div>
   );
 }
